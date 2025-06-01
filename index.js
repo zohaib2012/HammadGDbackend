@@ -4,8 +4,10 @@ import { database } from "./config/database.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import cors from "cors"
-import { projectroutes } from "./routes/project.js";
-import { messagesroutes } from "./routes/messages.js";
+import { projectroutes } from "./api/routes/project.js";
+import { messagesroutes } from "./api/routes/messages.js";
+// import { projectroutes } from "./routes/project.js";
+// import { messagesroutes } from "./routes/messages.js";
 
 config()
 let startserver = () => {
@@ -13,14 +15,7 @@ let startserver = () => {
     const app = express()
 
     app.use(express.json())
-    // app.use(cors({
-
-    //     origin: "http://localhost:5173/",
-    //     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    //     credentials: true
-
-    // }));
-
+ 
 
 
     app.use(cors({
